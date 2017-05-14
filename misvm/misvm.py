@@ -65,7 +65,7 @@ class MISVM(SIL):
         for rr in range(self.restarts + 1):
             if rr == 0:
                 if self.verbose:
-                    print 'Non-random start...'
+                    print('Non-random start...')
                 pos_bag_avgs = np.vstack([np.average(bag, axis=0) for bag in bs.pos_bags])
             else:
                 if self.verbose:
