@@ -40,7 +40,7 @@ def main():
         accuracies[algorithm] = np.average(test_labels == np.sign(predictions))
 
     for algorithm, accuracy in accuracies.items():
-        print '\n%s Accuracy: %.1f%%' % (algorithm, 100 * accuracy)
+        print ('\n%s Accuracy: %.1f%%' % (algorithm, 100 * accuracy))
 
 
 if __name__ == '__main__':
