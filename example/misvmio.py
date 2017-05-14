@@ -415,7 +415,7 @@ def save_c45(example_set, basename, basedir='.'):
     schema_name = os.path.join(basedir, basename + NAMES_EXT)
     data_name = os.path.join(basedir, basename + DATA_EXT)
 
-    print schema_name
+    print(schema_name)
     with open(schema_name, 'w+') as schema_file:
         schema_file.write('0,1.\n')
         for feature in example_set.schema:
