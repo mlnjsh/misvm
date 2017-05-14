@@ -220,12 +220,12 @@ class miSVM(SIL):
         for rr in range(self.restarts + 1):
             if rr == 0:
                 if self.verbose:
-                    print 'Non-random start...'
+                    print('Non-random start...')
                 initial_classes = np.vstack([-np.ones((bs.L_n, 1)),
                                              np.ones((bs.L_p, 1))])
             else:
                 if self.verbose:
-                    print 'Random restart %d of %d...' % (rr, self.restarts)
+                    print('Random restart %d of %d...' % (rr, self.restarts))
                 rand_classes = np.matrix([np.sign([uniform(-1.0, 1.0)
                                                    for i in range(bs.L_p)])]).T
                 initial_classes = np.vstack([-np.ones((bs.L_n, 1)),
