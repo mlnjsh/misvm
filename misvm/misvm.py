@@ -69,7 +69,7 @@ class MISVM(SIL):
                 pos_bag_avgs = np.vstack([np.average(bag, axis=0) for bag in bs.pos_bags])
             else:
                 if self.verbose:
-                    print 'Random restart %d of %d...' % (rr, self.restarts)
+                    print('Random restart %d of %d...' % (rr, self.restarts))
                 pos_bag_avgs = np.vstack([rand_convex(len(bag)) * bag for bag in bs.pos_bags])
 
             intial_instances = np.vstack([bs.neg_instances, pos_bag_avgs])
